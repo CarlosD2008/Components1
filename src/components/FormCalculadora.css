@@ -1,0 +1,114 @@
+.calculator-form {
+  padding: 30px 36px 36px;
+}
+
+.fields-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.calculator-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  color: #475569;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.calculator-form input,
+.calculator-form select {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 12px 13px;
+  color: #172033;
+  background: #f8fafc;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.calculator-form input:focus,
+.calculator-form select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+.button-row button {
+  flex: 1;
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  padding: 13px 18px;
+  font-weight: 700;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
+}
+.button-row button:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+.calculate-button {
+  color: white;
+  background: #2563eb;
+}
+.clear-button {
+  color: #334155;
+  background: #e2e8f0;
+}
+
+.result-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  margin-top: 24px;
+  padding: 16px 18px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #64748b;
+}
+.result-box span {
+  font-weight: 700;
+}
+.result-box strong {
+  color: #94a3b8;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.8rem;
+}
+.result-box.has-result {
+  border-style: solid;
+  border-color: #bfdbfe;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+.result-box.has-result strong {
+  color: #1d4ed8;
+}
+.error-message {
+  margin: 14px 0 0;
+  color: #dc2626;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .calculator-form {
+    padding: 24px;
+  }
+  .fields-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

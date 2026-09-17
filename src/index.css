@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #172033;
+  background: #eef2f7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; min-width: 320px; }
+
+button, input, select { font: inherit; }
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: radial-gradient(circle at top left, #dbeafe 0, transparent 38%), #eef2f7;
+}
+
+.calculator-card {
+  width: min(100%, 460px);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 22px 60px rgba(35, 54, 84, 0.14);
+}
+
+.card-header { padding: 36px 36px 26px; background: #172554; color: white; }
+.eyebrow { color: #93c5fd; font-size: .75rem; font-weight: 700; letter-spacing: .12em; }
+h1 { margin: 10px 0 8px; font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 6vw, 2.8rem); line-height: 1.05; }
+.card-header p { margin: 0; color: #bfdbfe; line-height: 1.5; }
+
+@media (max-width: 480px) {
+  .app-shell { padding: 12px; }
+  .card-header { padding: 28px 24px 22px; }
+}
+
