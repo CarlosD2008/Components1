@@ -1,78 +1,160 @@
-# Calculadora Simples — React JS
+# 🧮 Calculadora Simples — React JS
 
-Projeto desenvolvido para o desafio **Calculadora Simples**, com React JS e Vite.
+<p align="center">
 
-## Funcionalidades
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=2800&pause=900&color=61DAFB&center=true&vCenter=true&width=700&lines=🧮+Calculadora+Simples;⚛️+Projeto+com+React+JS;🚀+Desenvolvido+com+Vite;💡+Praticando+Componentização" alt="Typing Animation">
 
-- Entrada do primeiro número;
-- Entrada do segundo número;
-- Seleção das operações de adição, subtração, multiplicação e divisão;
-- Botão **Calcular**;
-- Botão **Limpar**;
-- Exibição do resultado na tela;
-- Validação de campos vazios;
-- Tratamento de divisão por zero;
-- Layout responsivo e estilização própria do componente.
+</p>
 
-## Como executar
+<p align="center">
 
-É necessário ter o [Node.js](https://nodejs.org/) instalado.
+<img src="https://img.shields.io/badge/React-18%2B-61DAFB?style=for-the-badge&logo=react&logoColor=20232A">
+<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
 
-```bash
-npm install
-npm run dev
+</p>
+
+<p align="center">
+
+<strong>Uma calculadora simples, responsiva e componentizada desenvolvida para praticar os fundamentos do React JS.</strong>
+
+</p>
+
+---
+
+## ✨ Sobre o Projeto
+
+Este projeto foi desenvolvido como parte do desafio **Calculadora Simples — React JS**, utilizando **React JS + Vite**.
+
+A proposta é construir uma calculadora capaz de receber dois números, permitir a escolha de uma operação matemática e apresentar o resultado de maneira clara e interativa.
+
+> 💡 **Objetivo:** praticar conceitos fundamentais do React através de um projeto pequeno, funcional e fácil de entender.
+
+---
+
+## 🎯 O que o projeto faz?
+
+```text
+┌─────────────────────────────────────┐
+│         🧮 CALCULADORA              │
+├─────────────────────────────────────┤
+│                                     │
+│  🔢 Primeiro número                 │
+│  ┌───────────────────────────────┐  │
+│  │            10                 │  │
+│  └───────────────────────────────┘  │
+│                                     │
+│  🔢 Segundo número                  │
+│  ┌───────────────────────────────┐  │
+│  │             5                 │  │
+│  └───────────────────────────────┘  │
+│                                     │
+│  ⚙️ Operação                        │
+│  ┌───────────────────────────────┐  │
+│  │       +  Adição               │  │
+│  └───────────────────────────────┘  │
+│                                     │
+│       [ 🧮 CALCULAR ]               │
+│       [ 🧹 LIMPAR   ]               │
+│                                     │
+│  ✨ Resultado: 15                   │
+│                                     │
+└─────────────────────────────────────┘
 ```
 
-Depois, acesse o endereço exibido pelo Vite no terminal, normalmente `http://localhost:5173`.
+---
 
-Para gerar a versão de produção:
+# 🚀 Funcionalidades
 
-```bash
-npm run build
-```
+| Recurso             | Descrição                                |
+| ------------------- | ---------------------------------------- |
+| 🔢 Primeiro número  | Campo para informar o primeiro valor     |
+| 🔢 Segundo número   | Campo para informar o segundo valor      |
+| ➕ Adição            | Soma os dois números                     |
+| ➖ Subtração         | Subtrai o segundo número do primeiro     |
+| ✖️ Multiplicação    | Multiplica os dois valores               |
+| ➗ Divisão           | Divide o primeiro número pelo segundo    |
+| 🧮 Calcular         | Executa a operação selecionada           |
+| 🧹 Limpar           | Remove os valores preenchidos            |
+| ⚠️ Validação        | Verifica campos vazios                   |
+| 🛑 Divisão por zero | Impede operações matemáticas inválidas   |
+| 📱 Responsividade   | Interface adaptada para diferentes telas |
 
-## Estrutura principal
+---
+
+# ⚛️ Tecnologias utilizadas
+
+<p align="center">
+
+<img src="https://skillicons.dev/icons?i=react,vite,js,css,html" />
+
+</p>
+
+### 🧩 React JS
+
+Utilizado para construir a interface através de componentes reutilizáveis e controlar os estados da aplicação.
+
+### ⚡ Vite
+
+Responsável pelo ambiente de desenvolvimento e pela geração da versão de produção.
+
+### 🟨 JavaScript
+
+Utilizado para implementar toda a lógica matemática e comportamento da calculadora.
+
+### 🎨 CSS
+
+Responsável pela aparência, organização, responsividade e estilização da interface.
+
+### 📝 HTML / JSX
+
+Utilizado para estruturar os elementos da aplicação.
+
+---
+
+# 🧠 Conceitos de React aplicados
+
+## 1️⃣ Componentização
+
+O formulário da calculadora foi separado em um componente próprio:
 
 ```text
 src/
-├── components/
-│   ├── FormCalculadora.jsx
-│   └── FormCalculadora.css
-├── App.jsx
-├── index.css
-└── main.jsx
+└── components/
+    └── FormCalculadora.jsx
 ```
 
-## Conceitos aplicados
+Essa organização permite separar a responsabilidade da interface e facilita futuras alterações.
 
-### Componentização
+---
 
-O formulário foi separado no componente reutilizável `FormCalculadora.jsx`, localizado dentro da pasta `src/components`, conforme solicitado no desafio.
+## 2️⃣ JSX
 
-### JSX
+O React utiliza **JSX** para descrever a interface.
 
-A interface é descrita usando JSX, que permite escrever a estrutura visual com elementos semelhantes ao HTML dentro do JavaScript.
+Exemplo:
 
-### Estado com `useState`
+```jsx
+<form onSubmit={handleSubmit}>
 
-O hook `useState` controla os valores dos dois números, da operação selecionada, do resultado e da mensagem de erro. Quando um estado muda, o React atualiza a tela automaticamente.
+    <label>
+        Primeiro número
+    </label>
 
-### Eventos
+    <input
+        type="number"
+        value={primeiroNumero}
+        onChange={handlePrimeiroNumero}
+    />
 
-Foram utilizados eventos como `onChange` para acompanhar a digitação e a seleção da operação, `onSubmit` para calcular e `onClick` para limpar o formulário.
+</form>
+```
 
-### Renderização condicional
+✨ Dessa forma, podemos combinar JavaScript com uma estrutura semelhante ao HTML.
 
-O resultado e a mensagem de erro são mostrados de forma condicional. Assim, a interface apresenta o resultado somente depois do cálculo e exibe mensagens úteis quando há algum problema.
+---
 
-### Boas práticas
+# 🔄 useState
 
-Os campos possuem `label` associado, os botões têm tipos definidos e o resultado usa `aria-live` para melhorar a acessibilidade ao ser atualizado.
-
-## Operações
-
-As operações são organizadas no objeto `OPERACOES`, que relaciona cada símbolo a uma função matemática. Essa abordagem mantém a lógica de cálculo clara e evita repetição de código.
-
-## Autor
-
-Projeto acadêmico desenvolvido como exercício de React JS.
+O hook `useState` é
